@@ -1,0 +1,67 @@
+ScreenManager:
+    id: screen_manager
+
+    Screen:
+        
+        name: "progress"
+        BoxLayout:
+            orientation: "vertical"
+            # size: root.width, root.height
+            Label:
+                text: ""
+                font_size:32
+                background_color: (1,1,1,1)
+            Label:
+                text: "LOGO"
+                font_size:32
+                background_color: (1,1,1,1)
+
+            ProgressBar:
+                id: progress_bar
+                min:0
+                max:100
+                pos_hint: {"x":.1, "y":.1}
+                size_hint_x: .8
+                background_color: (1,1,1,1)
+            
+            Label:
+                text: ""
+                font_size:32
+                background_color: (1,1,1,1)
+            
+            Label:
+                text: ""
+                font_size:32
+                background_color: (1,1,1,1)
+
+    Screen:
+        name: 'second'
+        username:username
+        new_username:new_username
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: ""
+                font_size:32
+            TextInput:
+                id: username
+                multiline: False
+                hint_text: "Enter your Username: "
+            Label:
+                text: ""
+                font_size:32
+            TextInput:
+                id: new_username
+                multiline: False
+                hint_text: "Enter your New Username: "
+            
+            Button:
+                text: "Submit"
+                multiline: False
+                # on_press: app.on_text_input_change()
+
+            Label:
+                text: ""
+                font_size:32
+            

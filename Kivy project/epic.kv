@@ -1,0 +1,25 @@
+#:import utils kivy.utils
+
+<LoginForm>:
+    name:name
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        GridLayout:
+            cols:2
+            Label:
+                text: "Username: "
+            TextInput:
+                id: name
+                multipleline: False
+                
+        Button:
+            text:"Submit"
+            font_size: 32
+            on_press: root.press()
+            background_normal: "" 
+            # background_color:(33/255, 192/255, 209/255,1)
+            background_color: utils.get_color_from_hex("#21c0d1")
+
+        
+
